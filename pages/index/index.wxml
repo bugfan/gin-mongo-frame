@@ -10,4 +10,10 @@
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view>
+  <view>
+    <button type='primary'>普通登录</button>
+  </view>
+  <view>
+    <button type='warn' open-type='getUserInfo' bindgetuserinfo='wxLogin'>微信登录</button>
+  </view>
 </view>

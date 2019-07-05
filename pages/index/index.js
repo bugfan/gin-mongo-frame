@@ -50,5 +50,16 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  wxLogin:function(e) {
+    console.log("wx info:",e.detail)
+    
+    wx.login({
+      success:function(res){
+          // 1. 获取临时凭证
+          console.log("wx.login res:",res) // code 只存在 5mins
+          // 2. 调用自己后端，session_key secret
+      }
+    })
   }
 })
