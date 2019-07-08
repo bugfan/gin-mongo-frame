@@ -1,0 +1,2 @@
+1.从微信官方用code换回来open_id和session_key
+2.把open_id当做redis的key，session_key当做value存起来,设置一个时间

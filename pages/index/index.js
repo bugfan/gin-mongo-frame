@@ -59,6 +59,14 @@ Page({
           // 1. 获取临时凭证
           console.log("wx.login res:",res) // code 只存在 5mins
           // 2. 调用自己后端，session_key secret
+
+          // 3. 判断成功之后，保存用户信息到本地
+          if(true){
+            wx.setStorageSync("userInfo", e.detail.userInfo)
+            wx.redirectTo({
+              url: '../index/index',
+            })
+          }
       }
     })
   }
